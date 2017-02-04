@@ -1,0 +1,10 @@
+.idea/
+*/project/project/
+*/project/target/
+*/target/
+*.class
+*.log
+.cache
+.history
+.lib/
+*/project/plugins/project/
