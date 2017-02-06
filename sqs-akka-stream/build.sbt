@@ -2,7 +2,7 @@ organization := "fr.xebia"
 name := "sqs-akka-stream"
 
 scalaVersion := "2.11.8"
-val akkaVersion = "2.4.14"
+val akkaVersion = "2.4.16"
 
 scalacOptions ++= Seq(
   "-deprecation",
@@ -22,8 +22,7 @@ scalacOptions ++= Seq(
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-stream" % akkaVersion,
-  "com.typesafe.play" %% "play-json" % "2.4.8",
-  "com.typesafe.play" %% "play-ws" % "2.4.8",
+  "com.typesafe.akka" %% "akka-slf4j" % akkaVersion,
   "ch.qos.logback" % "logback-classic" % "1.1.6",
   "org.slf4j" % "log4j-over-slf4j" % "1.7.21",
   "com.amazonaws" % "aws-java-sdk-sqs" % "1.11.86",
