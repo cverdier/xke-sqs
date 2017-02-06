@@ -17,7 +17,7 @@ import scala.util.{Failure, Success, Try}
 
 object ApplicationFailable extends App {
 
-  val queueUrl = "xke-test"
+  val queueUrl = "xke-lorem"
 
   val conf = ConfigFactory.load()
   implicit val system = ActorSystem("xke-sqs-failable", conf)

@@ -18,7 +18,7 @@ import scala.util.{Success, Try}
 
 object Application extends App {
 
-  val queueUrl = "xke-test"
+  val queueUrl = "xke-lorem"
 
   val conf = ConfigFactory.load()
   implicit val system = ActorSystem("xke-sqs-delayed", conf)
@@ -51,7 +51,7 @@ object Application extends App {
   // We simulate an API Call with some delay
   def delayedLogging(message: Message): Future[Message] = {
     val promise = Promise[Message]()
-    system.scheduler.scheduleOnce(100 millis)(promise.complete(Success(message)))
+    system.scheduler.scheduleOnce(250 millis)(promise.complete(Success(message)))
     promise.future.map { res =>
       system.log.info(s"(${res.getMessageId}) ${res.getBody}")
       res
