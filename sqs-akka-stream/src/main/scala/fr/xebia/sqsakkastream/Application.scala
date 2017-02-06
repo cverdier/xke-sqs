@@ -16,7 +16,7 @@ import scala.language.postfixOps
 import scala.util.{Success, Try}
 
 
-object ApplicationDelayed extends App {
+object Application extends App {
 
   val queueUrl = "xke-test"
 
